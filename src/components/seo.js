@@ -17,16 +17,20 @@ const SEO = ({title, description}) => {
     }
   }
 
+  const seo = {
+    title: ''
+  }
+
   useEffect(()=>{
     console.log("pathName",pathname);
   },[pathname])
 
   return (
-    <Helmet title={data[pathname].title} titleTemplate={titleTemplate}>
-        <meta name="description" content={data[pathname].title} />
+    <Helmet title={data[pathname]?.title || 'Auth Gatsby'} titleTemplate={titleTemplate}>
+        <meta name="description" content={data[pathname]?.description ||'Auth Gatsby'} />
         <meta property='og:url' content={`${siteUrl}${pathname}`} />
-        <meta property='og:title' content={data[pathname].title} />
-        <meta property="og:description" content={data[pathname].description} />
+        <meta property='og:title' content={data[pathname]?.title || 'Auth Gatsby'} />
+        <meta property="og:description" content={data[pathname]?.description || 'Auth Gatsby'  } />
        
     </Helmet>
   );
