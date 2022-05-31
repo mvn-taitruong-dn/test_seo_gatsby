@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import {useLocation} from "@reach/router";
 import { Helmet } from 'react-helmet';
-import Logo from '../images/logo.svg'
+import Logo from '../images/logo.png'
 
 const SEO = ({title, description}) => {
   const {pathname, origin} = useLocation();
