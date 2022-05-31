@@ -6,6 +6,7 @@ import Status from "../components/Status"
 
 const Index = () => (
   <Layout>
+    
     <Status />
     <View title="Simple Authentication Example">
       <p>
