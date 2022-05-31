@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {useLocation} from "@reach/router";
 import { Helmet } from 'react-helmet';
+import Logo from '../images/logo.svg'
 
 const SEO = ({title, description}) => {
   const {pathname, origin} = useLocation();
@@ -31,6 +32,7 @@ const SEO = ({title, description}) => {
         <meta property='og:url' content={`${siteUrl}${pathname}`} />
         <meta property='og:title' content={data[pathname]?.title || 'Auth Gatsby'} />
         <meta property="og:description" content={data[pathname]?.description || 'Auth Gatsby'  } />
+        <meta property='og:image' content={Logo} />
        
     </Helmet>
   );
