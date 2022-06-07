@@ -30,10 +30,10 @@ const SEO = ({title, description}) => {
     <Helmet title={data[pathname]?.title || 'Auth Gatsby'} titleTemplate={titleTemplate}>
         <meta name="description" content={data[pathname]?.description ||'Auth Gatsby'} />
         <meta property='og:url' content={`${siteUrl}${pathname}`} />
-        <meta property='og:title' content={data[pathname]?.title || 'Auth Gatsby'} />
-        <meta property="og:description" content={data[pathname]?.description || 'Auth Gatsby'  } />
-        <meta property='og:image' content={Logo} />
-       
+        <meta property='og:title' content={data[pathname]?.title || 'Auth Gatsby OG'} />
+        <meta property="og:description" content={data[pathname]?.description || 'Auth Gatsby OG'  } />
+        
+        <meta name="robots" content="index"></meta>
     </Helmet>
   );
 };
