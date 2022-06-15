@@ -11,7 +11,7 @@ exports.createPages= async({actions})=>{
   const pages = [
     {path:'/',name:"Home"},
     {path:'/hello',name:"Hello"},
-    // {path:'/error/:code',name:"Error"},
+    {path:'/error/:code',name:"Error"},
   ]
 
   pages.forEach((page1)=>{
@@ -24,7 +24,7 @@ exports.createPages= async({actions})=>{
 
  
   createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
-  createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
+  createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
 }
 
 exports.onCreatePage = async ({ page, actions }) => {
