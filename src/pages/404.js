@@ -20,19 +20,19 @@ const NotFound = () =>
       navigate('/', {replace:true})
       return null;
     };
-  return null;
   
-  // return (
+  
+  return (
  
   
 
-  // <Layout>
-  //   <View title="Not Found">
-  //     {/* <h3>{code}</h3> */}
-  //     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  //   </View>
-  // </Layout>
-// )
+  <Layout>
+    <View title="Not Found">
+      {/* <h3>{code}</h3> */}
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </View>
+  </Layout>
+)
 }
 
 export default NotFound
