@@ -22,6 +22,9 @@ exports.createPages= async({actions})=>{
     })
   })
 
+  createRedirect({ fromPath: "/hello/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
+  createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
+
  
  
 }
@@ -39,8 +42,8 @@ exports.onCreatePage = async ({ page, actions }) => {
   //   // Update the page.
   //   createPage(page)
   // }
-  createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
-  createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
+  // createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
+  // createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
   if (page.path.match(/^\/app/)) {
     console.log("page.matchPath",page.matchPath);
     console.log("page",page);
