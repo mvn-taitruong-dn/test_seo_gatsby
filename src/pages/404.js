@@ -11,10 +11,14 @@ import { useLocation } from "@reach/router"
 const NotFound = () => 
 {
   const location = useLocation();
-  useEffect(()=>{
-    console.log("location.pathname",location.pathname); 
-    navigate('/', {replace:true})
-  },[])
+  
+    if (location.pathname.match(/^\/hello/)){
+
+      navigate('/hello', {replace:true})
+    }else {
+      navigate('/', {replace:true})
+    };
+  return null;
   
   return (
  
