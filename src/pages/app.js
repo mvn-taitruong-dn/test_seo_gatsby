@@ -14,7 +14,8 @@ const App = () => (
       <PrivateRoute path="/app/details" component={Details} />
       <PrivateRoute path="/app/profile" component={Profile} />
       <Login path="/app/login" />
-      {/* <Redirect from="/*" to='/' noThrow/> */}
+      <Redirect from="/hello/*" to='/hello' noThrow/>
+      <Redirect from="/*" to='/' noThrow/>
     </Router>
   </Layout>
 )
