@@ -5,7 +5,7 @@ import Logo from '../images/logo.svg'
 import Logo1 from '../images/logo.png'
 const hello = () => {
   return (
-    <Layout>
+    <Layout>  
       
       <Status/>
       <div>hello</div> 
