@@ -6,9 +6,10 @@ import Logo1 from '../images/logo.png'
 const hello = () => {
   return (
     <Layout>  
-      
+         
       <Status/>
-      <div>hello</div> 
+
+      <div>hello </div> 
       <img src={Logo1} alt='logo' />
 
     </Layout>
