@@ -42,13 +42,13 @@ exports.onCreatePage = async ({ page, actions }) => {
   //   // Update the page.
   //   createPage(page)
   // }
-  // createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
-  // createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
-  if (page.path.match(/^\/app/)) {
+  createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
+  createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
+  if (page.path.match(/^\//)) {
     console.log("page.matchPath",page.matchPath);
     console.log("page",page);
     console.log("page.path.",page.path);
-    page.matchPath = `/app/*`
+    page.matchPath = `/*`
     // Update the page.
     createPage(page)
   }
