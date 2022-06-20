@@ -3,8 +3,11 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import View from "../components/View"
 import Status from "../components/Status"
+import SEO from "../components/seo"
 
 const Index = () => (
+  <>
+
   <Layout>
     
     <Status />
@@ -31,6 +34,7 @@ const Index = () => (
       </p>
     </View>
   </Layout>
+  </>
 )
 
 export default Index
