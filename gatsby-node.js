@@ -44,7 +44,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   // }
   
   console.log("page.path.",page.path);
-  if (page.path.match(/^\/[...]/)) {
+  if (page.path.match(/^\/app/)) {
     console.log("page.matchPath",page.matchPath);
     console.log("page",page);
     console.log("page.path.",page.path);
