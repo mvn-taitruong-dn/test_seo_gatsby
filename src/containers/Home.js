@@ -33,6 +33,7 @@ const Index = () => (
         <Link to="/hello">your profile</Link>.
       </p>
     </View>
+    <SEO />
   </Layout>
   </>
 )
