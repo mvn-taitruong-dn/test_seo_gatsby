@@ -36,15 +36,15 @@ exports.onCreatePage = async ({ page, actions }) => {
   // console.log("page.matchPath",page.matchPath);
   // console.log("page",page);
   // console.log("page.path.",page.path);
-  // if (page.path.match(/^\/app/)) {
+  // if (page.path.match(/^\/)) {
    
-  //   page.matchPath = `/app/*`
+  //   page.matchPath = `/*`
   //   // Update the page.
   //   createPage(page)
   // }
-  createRedirect({ fromPath: "/hello/*", toPath: "/hello", isPermanent: true , redirectInBrowser: true});
-  createRedirect({ fromPath: "/*", toPath: "/", isPermanent: true , redirectInBrowser: true});
-  if (page.path.match(/^\//)) {
+  
+  console.log("page.path.",page.path);
+  if (page.path.match(/^\/[...]/)) {
     console.log("page.matchPath",page.matchPath);
     console.log("page",page);
     console.log("page.path.",page.path);
@@ -69,12 +69,12 @@ exports.onCreatePage = async ({ page, actions }) => {
   //   createPage(page)
   // }
   
-  if (page.path.match(/^\/error\/$/)) {
-    console.log("sdsds");
-    // Match all paths starting with this code (apart from other valid paths)
-    page.matchPath = `/error/*`
-    createPage(page)
-  }
+  // if (page.path.match(/^\/error\/$/)) {
+  //   console.log("sdsds");
+  //   // Match all paths starting with this code (apart from other valid paths)
+  //   page.matchPath = `/error/*`
+  //   createPage(page)
+  // }
   
 
 

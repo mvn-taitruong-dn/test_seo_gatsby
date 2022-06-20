@@ -22,7 +22,7 @@ const Index = () => (
       <p>
         For the full experience, go to
         {` `}
-        <Link to="/app/profile">your profile</Link>.
+        <Link to="/profile">your profile</Link>.
       </p>
       <p>
         Test Hello

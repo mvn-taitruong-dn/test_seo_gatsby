@@ -10,7 +10,7 @@ export default () => {
       <p className={status__text}>
         To get the full app experience, you’ll need to
         {` `}
-        <Link to="/app/login">log in</Link>.
+        <Link to="/login">log in</Link>.
       </p>
     )
   } else {
@@ -25,7 +25,7 @@ export default () => {
           href="/"
           onClick={event => {
             event.preventDefault()
-            logout(() => navigate(`/app/login`))
+            logout(() => navigate(`/login`))
           }}
         >
           log out
