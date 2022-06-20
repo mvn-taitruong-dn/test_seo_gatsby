@@ -11,7 +11,7 @@ import { main } from "./main.module.css"
 const Layout = ({ children }) => (
   <div>
     {/* <Helmet title="Simple Authentication With Gatsby" /> */}
-    <SEO />
+    {/* <SEO /> */}
     <Header />
     <main className={main}>{children}</main>
   </div>
