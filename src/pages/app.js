@@ -10,7 +10,7 @@ import Status from "../components/Status"
 const App = () => (
   <Layout>
     <Status />
-    <Router >
+    <Router basepath='/app'>
       <PrivateRoute path="/details" component={Details} />
       <PrivateRoute path="/profile" component={Profile} />
       <Login path="/login" />
