@@ -27,11 +27,11 @@ const SEO = ({title, description}) => {
   },[pathname])
 
   return (
-    <Helmet title={data[pathname]?.title || 'Auth Gatsby'} titleTemplate={titleTemplate}>
-        <meta name="description" content={data[pathname]?.description ||'Auth Gatsby'} />
+    <Helmet title={title ?? data[pathname]?.title } titleTemplate={titleTemplate}>
+        <meta name="description" content={description ?? data[pathname]?.description} />
         <meta property='og:url' content={`${siteUrl}${pathname}`} />
-        <meta property='og:title' content={data[pathname]?.title || 'Auth Gatsby OG'} />
-        <meta property="og:description" content={data[pathname]?.description || 'Auth Gatsby OG'  } />
+        <meta property='og:title' content={title ?? data[pathname]?.title} />
+        <meta property="og:description" content={description ?? data[pathname]?.description } />
         
         <meta name="robots" content="index"></meta>
     </Helmet>
