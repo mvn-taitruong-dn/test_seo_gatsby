@@ -34,7 +34,7 @@ const Index = () => (
       </p>
     </View>
   </Layout>
-    <SEO title="Home Page SEO Test " description ="Home Page SEO Test description" />
+    <SEO screen='/hello'/>
   </>
 )
 

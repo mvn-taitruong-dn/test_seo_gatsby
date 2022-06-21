@@ -15,7 +15,7 @@ const hello = () => {
       <img src={Logo1} alt='logo' />
 
     </Layout>
-    <SEO title="Home Page SEO Test HELLO " description ="Home Page SEO Test description HELLO" />
+    <SEO screen='/' />
     </>
   );
 };
