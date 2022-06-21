@@ -24,9 +24,6 @@ exports.createPages= async({actions})=>{
 
   // createRedirect({ fromPath: "/hello/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
   createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
-
- 
- 
 }
 
 // exports.onCreatePage = async ({ page, actions }) => {
