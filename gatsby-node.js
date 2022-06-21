@@ -48,7 +48,7 @@ exports.onCreatePage = async ({ page, actions }) => {
     console.log("page.matchPath",page.matchPath);
     console.log("page",page);
     console.log("page.path.",page.path);
-    page.matchPath = `/app/*`
+    page.matchPath = `/*`
     // Update the page.
     await createPage(page);
     // page.matchPath = `/profile`;
