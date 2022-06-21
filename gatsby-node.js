@@ -6,25 +6,7 @@ const path = require("path")
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-exports.createPages= async({actions})=>{
-  const { createPage, createRedirect } = actions
-  const pages = [
-    {path:'/',name:"Home"},
-    {path:'/hello',name:"Hello"},
-    {path:'/error/:code',name:"Error"},
-  ]
 
-  pages.forEach((page1)=>{
-    const pageTemplate = path.resolve(`src/containers/${page1.name}.js`);
-    createPage({
-      path:page1.path,
-      component: pageTemplate,
-    })
-  })
-
-  // createRedirect({ fromPath: "/hello/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
-  // createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
-}
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, createRedirect } = actions
@@ -90,4 +72,24 @@ exports.onCreatePage = async ({ page, actions }) => {
   
 
 
+}
+
+exports.createPages= async({actions})=>{
+  const { createPage, createRedirect } = actions
+  const pages = [
+    {path:'/',name:"Home"},
+    {path:'/hello',name:"Hello"},
+    {path:'/error/:code',name:"Error"},
+  ]
+
+  pages.forEach((page1)=>{
+    const pageTemplate = path.resolve(`src/containers/${page1.name}.js`);
+    createPage({
+      path:page1.path,
+      component: pageTemplate,
+    })
+  })
+
+  // createRedirect({ fromPath: "/hello/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
+  // createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
 }
