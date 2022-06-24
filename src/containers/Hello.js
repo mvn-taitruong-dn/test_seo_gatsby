@@ -15,7 +15,7 @@ const hello = () => {
       <img src={Logo1} alt='logo' />
 
     </Layout>
-    {/* <SEO screen='/' /> */}
+    <SEO screen='/hello' />
     </>
   );
 };

@@ -8,20 +8,20 @@ const path = require("path")
 
 
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage, createRedirect } = actions
+// exports.onCreatePage = async ({ page, actions }) => {
+//   const { createPage, createRedirect } = actions
   
-  console.log("page.path.",page.path);
-  if (page.path.match(/^\/app/)) {
-    console.log("page.matchPath",page.matchPath);
-    console.log("page",page);
-    console.log("page.path.",page.path);
-    page.matchPath = `/app/*`
+//   console.log("page.path.",page.path);
+//   if (page.path.match(/^\/app/)) {
+//     console.log("page.matchPath",page.matchPath);
+//     console.log("page",page);
+//     console.log("page.path.",page.path);
+//     page.matchPath = `/app/*`
     
-    await createPage(page);
+//     await createPage(page);
   
-  }
-}
+//   }
+// }
 
 exports.createPages= async({actions})=>{
   const { createPage, createRedirect } = actions
@@ -36,6 +36,7 @@ exports.createPages= async({actions})=>{
     createPage({
       path:page1.path,
       component: pageTemplate,
+      
     })
   })
 

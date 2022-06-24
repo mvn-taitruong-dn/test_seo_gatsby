@@ -34,7 +34,7 @@ const Index = () => (
       </p>
     </View>
   </Layout>
-    {/* <SEO screen='/hello'/> */}
+    <SEO screen='/'/>
   </>
 )
 
