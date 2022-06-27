@@ -15,7 +15,7 @@ const path = require("path")
  
 // }
 
-exports.createPages= async({actions})=>{
+exports.createPages= async({page, actions})=>{
   const { createPage, createRedirect } = actions
   const pages = [
     {path:'/',name:"Home"},
