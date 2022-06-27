@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const hello = () => {
   return (
     <>
-    <SEO screen='/hello' />
+    
     <Layout>  
          
       <Status/>
@@ -16,7 +16,7 @@ const hello = () => {
       <img src={Logo1} alt='logo' />
 
     </Layout>
-    
+    <SEO screen='/hello' />
     </>
   );
 };
