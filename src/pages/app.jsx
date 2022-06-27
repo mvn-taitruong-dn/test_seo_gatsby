@@ -12,7 +12,7 @@ const App = () => (
   <Layout>
     <Status />
     
-    <Router basepath='/app'>
+    <Router >
       <PrivateRoute path="/details" component={Details} />
       <PrivateRoute path="/profile" component={Profile} />
       <Login path="/login" />
