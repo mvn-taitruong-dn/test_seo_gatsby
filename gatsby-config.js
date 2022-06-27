@@ -8,7 +8,7 @@ module.exports = {
     options: {
       name: `Gatsby client-side routing only`,
       short_name: `client-side routing`,
-      start_url: `/`, 
+      start_url: `/app`, 
       icon:'./src/images/logo.png',
       display: `minimal-ui`
     }
