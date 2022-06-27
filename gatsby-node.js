@@ -8,14 +8,22 @@ const path = require("path")
 
 
 
-// exports.onCreatePage = async ({ page, actions }) => {
-//   const { createPage, createRedirect } = actions
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage, createRedirect } = actions
   
-//   console.log("page.path.",page.path);
- 
-// }
+  console.log("page.path.",page.path);
+  if (page.path.match(/^\/app/)) {
+    console.log("page.matchPath",page.matchPath);
+    console.log("page",page);
+    console.log("page.path.",page.path);
+    page.matchPath = `/app/*`
+    
+    createPage(page);
+  
+  }
+}
 
-exports.createPages= async({page, actions})=>{
+exports.createPages= async({ actions})=>{
   const { createPage, createRedirect } = actions
   const pages = [
     {path:'/',name:"Home"},
@@ -32,15 +40,7 @@ exports.createPages= async({page, actions})=>{
     })
   })
 
-  if (page.path.match(/^\/app/)) {
-    console.log("page.matchPath",page.matchPath);
-    console.log("page",page);
-    console.log("page.path.",page.path);
-    page.matchPath = `/app/*`
-    
-    await createPage(page);
   
-  }
 
   // createRedirect({ fromPath: "/hello/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
   // createRedirect({ fromPath: "/*", toPath: "/404", isPermanent: true , redirectInBrowser: true});
