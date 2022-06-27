@@ -24,7 +24,8 @@ const SEO = ({title, description, screen}) => {
 
   useEffect(()=>{
     console.log("pathName",pathname);
-  },[pathname])
+    console.log("origin",origin);
+  },[pathname, origin])
 
   return (
     <Helmet title={title ?? data[screen]?.title } titleTemplate={titleTemplate}>
