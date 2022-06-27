@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, navigate } from "@reach/router"
+import { Link, navigate } from "gatsby"
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
 import { status, status__text } from "./status.module.css"
 
@@ -25,7 +25,7 @@ export default () => {
           href="/"
           onClick={event => {
             event.preventDefault()
-            logout(() => navigate(`/login`))
+            logout(() => navigate(`/app/login`))
           }}
         >
           log out

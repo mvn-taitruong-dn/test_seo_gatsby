@@ -11,10 +11,10 @@ const App = () => (
   <Layout>
     <Status />
     
-    <Router>
-      <PrivateRoute path="/app/details" component={Details} />
-      <PrivateRoute path="/app/profile" component={Profile} />
-      <Login path="/app/login" />
+    <Router basepath='/app'>
+      <PrivateRoute path="/details" component={Details} />
+      <PrivateRoute path="/profile" component={Profile} />
+      <Login path="/login" />
     </Router>
   </Layout>
 )

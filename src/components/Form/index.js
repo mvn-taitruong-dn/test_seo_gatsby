@@ -1,6 +1,6 @@
 import React from "react"
 import { form, form__label, form__input, form__button } from "./form.module.css"
-import { navigate } from "@reach/router"
+import { navigate } from "gatsby"
 
 export default ({ handleSubmit, handleUpdate }) => (
   <form
@@ -8,7 +8,7 @@ export default ({ handleSubmit, handleUpdate }) => (
     method="post"
     onSubmit={event => {
       handleSubmit(event)
-      navigate(`/profile`)
+      navigate(`/app/profile`)
     }}
   >
     <p>
